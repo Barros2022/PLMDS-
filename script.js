@@ -1,5 +1,6 @@
 // Cole aqui a URL do seu Apps Script (Implantar > Aplicativo da Web > URL)
-const url = "AKfycby1Z2EQ4VZyqgFoBTrhXE28bWRYzBCajxZBaNtYXdALT8SGyAu8ZC-Gaw7UvzvwFfaLmg";
+const url = "https://script.google.com/macros/s/AKfycby1Z2EQ4VZyqgFoBTrhXE28bWRYzBCajxZBaNtYXdALT8SGyAu8ZC-Gaw7UvzvwFfaLmg/exec
+";
 
 // --- Renderização dos controles ---
 const expOpcoes = ["Excelente", "Boa", "Regular", "Ruim", "Péssima"];
