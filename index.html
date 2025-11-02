@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Satisfação</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <h1>Pesquisa de Satisfação</h1>
+  <p>Sua opinião nos ajuda a melhorar</p>
+
+  <form id="formFeedback">
+
+    <label>De 1 a 5 como você avalia o atendimento recebido?</label>
+    <div class="rating" data-field="atendimento"></div>
+
+    <label>De 1 a 5 como você avalia o tempo de espera?</label>
+    <div class="rating" data-field="tempo"></div>
+
+    <label>De 1 a 5 como você avalia a limpeza do ambiente?</label>
+    <div class="rating" data-field="limpeza"></div>
+
+    <label>Como você avalia sua experiência geral conosco?</label>
+    <div class="options" id="experiencia">
+      <button>Excelente</button>
+      <button>Boa</button>
+      <button>Regular</button>
+      <button>Ruim</button>
+      <button>Péssima</button>
+    </div>
+
+    <label>Você retornaria a este estabelecimento no futuro?</label>
+    <div class="options" id="retorno">
+      <button>Sim</button>
+      <button>Talvez</button>
+      <button>Não</button>
+    </div>
+
+    <label>De 0 a 10, qual a chance de você recomendar este restaurante para um amigo ou familiar?</label>
+    <div class="rating-0-10" data-field="nps"></div>
+
+    <button type="submit" class="btn">Enviar avaliação</button>
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
