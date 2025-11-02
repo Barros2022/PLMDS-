@@ -1,5 +1,5 @@
 // ✅ Cole aqui a URL do Google Apps Script (Web App) que termina com /exec
-const url = "https://script.google.com/macros/s/AKfycbxWGwS1_2qBTcnwxR8n6_TM-elLcvl76-TqIWqefk9Md8Kc9gzFnZDRa9moTIUtGwjy0g/exec";
+const url = "https://script.google.com/macros/s/AKfycbyHFzwmQHnpnplO2qGTJxobbLWliE3DVGUq6TMn9B_3-gtyN0pR1tG1wqgfaFCX3I1vEw/exec";
 
 
 // --------------------------------------------------------
