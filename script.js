@@ -37,28 +37,23 @@ document.addEventListener("click", (e) => {
 document.getElementById("formFeedback").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const btn = document.querySelector(".btn");
-  btn.disabled = true;
-  btn.textContent = "Enviando...";
-
-  const getValue = sel => document.querySelector(sel)?.innerText || "";
+  const value = sel => document.querySelector(sel)?.innerText || "";
 
   const data = {
-    atendimento: getValue("[data-field='atendimento'] .selected"),
-    tempo:       getValue("[data-field='tempo'] .selected"),
-    limpeza:     getValue("[data-field='limpeza'] .selected"),
-    experiencia: getValue("#experiencia .selected"),
-    retorno:     getValue("#retorno .selected"),
-    nps:         getValue("[data-field='nps'] .selected")
+    atendimento: value("[data-field='atendimento'] .selected"),
+    tempo:       value("[data-field='tempo'] .selected"),
+    limpeza:     value("[data-field='limpeza'] .selected"),
+    experiencia: value("#experiencia .selected"),
+    retorno:     value("#retorno .selected"),
+    nps:         value("[data-field='nps'] .selected")
   };
 
-  // validação profissional
+  // ✅ Validação
   if (!data.atendimento || !data.tempo || !data.limpeza || !data.experiencia || !data.retorno || !data.nps) {
-    btn.disabled = false;
-    btn.textContent = "Enviar avaliação";
     return;
   }
 
+  // ✅ Envia para o Google Sheets
   fetch(url, {
     method: "POST",
     mode: "no-cors",
@@ -66,15 +61,7 @@ document.getElementById("formFeedback").addEventListener("submit", async (e) => 
     body: JSON.stringify(data)
   });
 
-  document.getElementById("successModal").classList.remove("hidden");
-
-  document.querySelectorAll(".selected").forEach(btn => btn.classList.remove("selected"));
-  document.getElementById("formFeedback").reset();
-  btn.disabled = false;
-  btn.textContent = "Enviar avaliação";
+  // ✅ Redireciona para página de obrigado
+  window.location.href = "obrigado.html";
 });
 
-// ----------------------- Fechar modal -----------------------
-function closeModal() {
-  document.getElementById("successModal").classList.add("hidden");
-}
