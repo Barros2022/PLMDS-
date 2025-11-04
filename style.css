@@ -7,13 +7,14 @@
 }
 
 body {
+  body {
   background: #f2f2f2;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;  /* ✅ adiciona espaço no topo e nas laterais */
+  min-height: 100vh;   /* ✅ permite scroll se conteúdo for maior */
 }
+
 
 /* ======= CARD ======= */
 .card {
